@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="深海空间" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        优化网站加载速度｜undefined
+        
+    </title>
+
+    <link rel="canonical" href="http://yoursite.com/2017/08/11/优化网站加载速度/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    深海空间
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>优化网站加载速度</h1>
+                    
+                    <span class="meta">
+                         作者 邓成宇
+                        <span>
+                          日期 2017-08-11
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            优化网站加载速度
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <p></p><h1>雅虎34条军规</h1><p></p>
+<hr>
+
+<p style="font-size: 20px;text-indent:0em">雅虎给出了优化网站加载速度的34条法则（包括Yslow规则22条） 详细说明，下载转发 ponytail 的译文（来自帕兰映像）。</p>
+
+<h3>1.Minimize HTTP Requests 减少HTTP请求</h3>
+
+<p>图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。</p>
+
+<h3>2.Use a Content Delivery Network 利用CDN技术</h3>
+
+<p>CDN 确实是好东西，8过服务器提供商的这项服务一般是要收费的，我以前买的国内空间是有这个的但是我当时根本不知道啥用，现在没了。。。</p>
+
+<h3>3.Add an Expires or a Cache-Control Header 设置头文件过期或者静态缓存</h3>
+
+<p>浏览器会用缓存来减少http请求数来加快页面加载的时间，如果页面头部加一个很长的过期时间，浏览器就会一直缓存页面里的元素。不过这样如果 页面里的东西变动的话就要改名字了，否则用户端不会主动刷新，看自己衡量了~ 这项可以通过修改.htaccess文件来实现。</p>
+
+<h3>4.Gzip Components Gzip压缩</h3>
+
+<p>Gzip格式是一种很普遍的压缩技术，几乎所有的浏览器都有解压Gzip格式的能力，而且它可以压缩的比例非常大，一般压缩率为85%。压缩没压缩，可以到 这里 做下测试。</p>
+
+<h3>5.Put Stylesheets at the Top 把CSS放顶部</h3>
+
+<p>让浏览者能尽早的看到网站的完整样式。</p>
+
+<h3>6.Put Scripts at the Bottom 把JS放底部</h3>
+
+<p>网站呈现完毕后再进行功能设置，当然这些JS要在你的加载过程中不影响内容表现。</p>
+<h3>7.Avoid CSS Expressions 避免CSS Expressions</h3>
+
+<p>CSS表达式很可怕，这个只被IE支持的东西执行时候的运算量非常大，你移动一下鼠标它都要进行重计算的，但有时候为了做浏览器的兼容必须要用到这个||| IE6去死去死！~</p>
+
+<h3>8.Make JavaScript and CSS External 将JS和CSS外链</h3>
+
+<p>前面讲到了缓存这个事情，一些较为公用的JS和CSS，我们可以使用外链的形式，譬如我就是从Google外链来的jQuery文件，如果我的浏览者在浏览别的使用了这个外链文件的网站时已经下载并缓存了这个文件，那么他在浏览我的网站的时候就不需要再进行下载了！~</p>
+
+<h3>9.Reduce DNS Lookups 减少DNS查找</h3>
+
+<p>貌似是要减少网站从外部调用资源，我的Google分析和picasa的外链图片都算在里面了。</p>
+
+<h3>10.Minify JavaScript and CSS 减小JS和CSS的体积</h3>
+
+<p>写JS和CSS都是有技巧的，用最少的代码实现同样的功能，减少空白，增强逻辑性，用缩写方式等等，当然也有不少工具也能够帮你实现这一点。</p>
+
+<h3>11. Avoid Redirects 避免重定向</h3>
+
+<p>再写入链接时，虽然”<a href="http://www" target="_blank" rel="external">http://www</a>. today-s-ooxx. com”和”<a href="http://www" target="_blank" rel="external">http://www</a>. today-s-ooxx. com/” 仅有一个最后的”/”只差，但是结果是不同的，服务器需要花时间把前者重定向为后者然后进行跳转，这个要自己注意，也可以在Apache里用Alias 或者mod_rewrite或者DirectorySlash解决。</p>
+
+<h3>12. Remove Duplicate Scripts 删除重复脚本</h3>
+
+<p>重复调用的代码浏览器并不会识别忽略，而是会再次运算一遍，这当然是大大的浪费。</p>
+
+<h3>13. Configure ETags 配置ETags</h3>
+
+<p>搞不清楚咋回事，总之我是在. htaccess里把它删除了。</p>
+
+<h3>14. Make Ajax Cacheable 缓存Ajax</h3>
+
+<p>Ajax是实时响应的，在浏览器接收到新的数据前，旧的数据被缓存，这样能够更好的提高效率。</p>
+
+<h3>15. Flush the Buffer Early 尽早的释放缓冲</h3>
+
+<p>当用户进行页面请求时，服务器端需要花费200到500毫秒时间来拼合HTML，将写在head与body之间，释放缓冲，这样可以将文件头先发送出去，然后再发送文件内容，提高效率。</p>
+
+<h3>16. Use GET for AJAX Requests 用GET方式进行AJAX请求</h3>
+
+<p>Get 方法和服务器只有一次交互（发送数据），而 Post 要两次（发送头部再发送数据）。</p>
+
+<h3>17. Post-load Components 延迟加载组件</h3>
+
+<p>最先加载必须的组件进行页面初始化，然后再加载其他，YUI Image Loader 是很好的例子。</p>
+
+<h3>18. Preload components 预加载组件</h3>
+
+<p>提前加载以后可能用到的东西，和延迟加载并不冲突，它的目的是为后续请求提供更快的响应，参见Google首页上的CSS sprites应用。</p>
+
+<h3>19. Reduce the Number of DOM Elements 减少DOM元素数量</h3>
+
+<p>复杂的页面结构意味着更长的下载及响应时间，更合理更高效的使用标签来架构页面，是好的前端的必备条件。</p>
+
+<h3>20. Split Components Across Domains 跨域分离组件</h3>
+
+<p>页面组件多个来源可以增大你的平行下载量，但注意不要过多，超过2-4个域名会引起上面说到的DNS查找浪费。</p>
+
+<h3>21. Minimize the Number of iframes 减少iframe数量</h3>
+
+<p>需要更有效的利用 ifames。<br>    iframe 优点：有利于下载缓慢的广告等第三方内容，安全沙箱，并行下载脚本<br>    iframe 缺点：即使为空也会有较大资源消耗，会阻止页面的onload，非语义</p>
+
+<h3>22. No 404s 不要出现404页面</h3>
+
+<p>站点本身里（非搜索结果）出现404页面，无意义的404页面会影响用户体验并且会消耗服务器资源。</p>
+
+<h3>23. Reduce Cookie Size 减小Cookie</h3>
+
+<p>Cookie在服务器及浏览器之间的通过文件头进行交换，尽可能减小Cookie体积，设置合理的过期时间，能够很好的提高效率。</p>
+
+<h3>24. Use Cookie-free Domains for Components 对组件使用无Cookie的域名</h3>
+
+<p>对静态组件的Cookie读取是一种浪费，使用另一个无Cookie的域名来存放你的静态组件式一个好方法，或者也可以在Cookie中只存放带www的域名。</p>
+
+<h3>25. Minimize DOM Access 减少DOM的访问次数</h3>
+
+<p>JS访问DOM是很慢的，尽量不要用JS来设置页面布局。</p>
+
+<h3>26. Develop Smart Event Handlers 开发灵活的事件处理句柄</h3>
+
+<p>DOM树上过多的元素被加入事件句柄的话，反应效率肯定会低，YUI事件工具有一个 onAvailable 方法可以帮助你灵活的设置DOM事件句柄</p>
+
+<h3>27. Choose &lt; link &gt;over @import 使用&lt; link &gt;而非 @import</h3>
+
+<p>在IE中使用@import就和在页面底部用&lt; link &gt;一样，我们前面说要把&lt; link &gt;放顶部的</p>
+
+<h3>28. Avoid Filters 避免过滤器的使用</h3>
+
+<p>如果需要Alpha透明，不要使用AlphaImageLoader，它效率低下而且只对IE6及以下的版本适用，用PNG8图片。如果你非要使用，加上_filter以免影响IE7+用户。</p>
+
+<h3>29. Optimize Images 优化图片</h3>
+
+<p>将你的GIF转为PNG8会是个减小体积的好办法，另外有很多方法处理你的JPG及PNG图片以达到优化效果。</p>
+
+<h3>30. Optimize CSS Sprites 优化CSS Sprites</h3>
+
+<p>在CSS Sprites中竖直并尽量紧凑的排列图片，尽量将颜色相似的图片排在一起，会减小图片本身的大小及提高页面图片显示速度。</p>
+
+<h3>31. Don’t Scale Images in HTML 不要在HTML中缩放图片</h3>
+
+<p>图片要用多大的就用多大的，1000X1000的图片被width=”100″ height=”100″以后，本身的KB数是不会减少的。</p>
+
+<h3>32. Make favicon. ico Small and Cacheable 缩小favicon. ico的大小并缓存它</h3>
+
+<p>站点的浏览器ICO应该不是经常换吧，那就长时间的缓存它，并且最好控制在1K以下。</p>
+
+<h3>33. Keep Components under 25K 保证组件在25K以下</h3>
+
+<p>iPhone不能缓存25K以上的组件，并且这还是要在被压缩前。</p>
+
+<h3>34. Pack Components into a Multipart Document 将组件打包进一个多部分的文档中</h3>
+
+<p>就好像在邮件中加入附件一样，一个HTTP请求就够了，但是这一技术需要确保你的代理支持，iPhone就不支持。</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2017/08/05/MongoDB+MongoVUE安装及入门/" data-toggle="tooltip" data-placement="top"
+                           title="">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">雅虎34条军规</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">1.Minimize HTTP Requests 减少HTTP请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">2.Use a Content Delivery Network 利用CDN技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">3.Add an Expires or a Cache-Control Header 设置头文件过期或者静态缓存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">4.Gzip Components Gzip压缩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">5.Put Stylesheets at the Top 把CSS放顶部</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">6.Put Scripts at the Bottom 把JS放底部</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">7.Avoid CSS Expressions 避免CSS Expressions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">8.Make JavaScript and CSS External 将JS和CSS外链</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">9.Reduce DNS Lookups 减少DNS查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">10.Minify JavaScript and CSS 减小JS和CSS的体积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">11. Avoid Redirects 避免重定向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">12. Remove Duplicate Scripts 删除重复脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">13. Configure ETags 配置ETags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">14. Make Ajax Cacheable 缓存Ajax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">15. Flush the Buffer Early 尽早的释放缓冲</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">16. Use GET for AJAX Requests 用GET方式进行AJAX请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">17. Post-load Components 延迟加载组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">18. Preload components 预加载组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">19. Reduce the Number of DOM Elements 减少DOM元素数量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">20. Split Components Across Domains 跨域分离组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">21. Minimize the Number of iframes 减少iframe数量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">22. No 404s 不要出现404页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">23. Reduce Cookie Size 减小Cookie</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">24. Use Cookie-free Domains for Components 对组件使用无Cookie的域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">25. Minimize DOM Access 减少DOM的访问次数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">26. Develop Smart Event Handlers 开发灵活的事件处理句柄</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">27. Choose < link >over @import 使用< link >而非 @import</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">28. Avoid Filters 避免过滤器的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">29. Optimize Images 优化图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">30. Optimize CSS Sprites 优化CSS Sprites</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">31. Don’t Scale Images in HTML 不要在HTML中缩放图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">32. Make favicon. ico Small and Cacheable 缩小favicon. ico的大小并缓存它</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">33. Keep Components under 25K 保证组件在25K以下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">34. Pack Components into a Multipart Document 将组件打包进一个多部分的文档中</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 深海空间 2017
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yoursite.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="">
+</body>
+
+</html>
