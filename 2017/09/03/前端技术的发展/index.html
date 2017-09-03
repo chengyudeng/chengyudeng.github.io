@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="深海空间" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        前端技术的发展｜undefined
+        
+    </title>
+
+    <link rel="canonical" href="http://yoursite.com/2017/09/03/前端技术的发展/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    深海空间
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>前端技术的发展</h1>
+                    
+                    <span class="meta">
+                         作者 邓成宇
+                        <span>
+                          日期 2017-09-03
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            前端技术的发展
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <p>&ensp;&ensp;前端开发技术，从狭义的定义来看，是指围绕HTML、JavaScript、CSS这样一套体系的开发技术，它的运行宿主是浏览器。从广义的定义来看，包括了：</p>
+<ul>
+<li>专门为手持终端设计的类似WML这样的类HTML语言，类似WMLScript这样的类JavaScript语言。</li>
+<li><p>VML和SVG等基于XML的描述图形的语言。</p>
+</li>
+<li><p>从属于XML体系的XML，XPath，DTD等技术。</p>
+</li>
+<li><p>用于支撑后端的ASP，JSP，ASP.net，PHP，nodejs等语言或者技术。</p>
+</li>
+<li>被第三方程序打包的一种类似浏览器的宿主环境，比如Adobe AIR和使用HyBird方式的一些开发技术，如PhoneGap（它使用Android中的WebView等技术，让开发人员使用传统Web开发技术来开发本地应用）</li>
+<li>Adobe Flash，Flex，Microsoft Silverlight，Java Applet，JavaFx等RIA开发技术。</li>
+</ul>
+<p>&ensp;&ensp;本文从狭义的前端定义出发，探讨一下这方面开发技术的发展过程。&lt; !–more–&gt;从前端开发技术的发展来看，大致可以分为以下几个阶段：</p>
+<h1 id="一-刀耕火种"><a href="#一-刀耕火种" class="headerlink" title="一. 刀耕火种"></a>一. 刀耕火种</h1><h2 id="1-静态页面"><a href="#1-静态页面" class="headerlink" title="1. 静态页面"></a>1. 静态页面</h2><p>最早期的Web界面基本都是在互联网上使用，人们浏览某些内容，填写几个表单，并且提交。当时的界面以浏览为主，基本都是HTML代码，有时候穿插一些JavaScript，作为客户端校验这样的基础功能。代码的组织比较简单，而且CSS的运用也是比较少的。</p>
+<p>最简单的是这样一个文件：</p>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;测试一&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;主标题&lt;/h1&gt;
+        &lt;p&gt;段落内容&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="2-带有简单逻辑的界面"><a href="#2-带有简单逻辑的界面" class="headerlink" title="2. 带有简单逻辑的界面"></a>2. 带有简单逻辑的界面</h2><p>这个界面带有一段JavaScript代码，用于拼接两个输入框中的字符串，并且弹出窗口显示。</p>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;测试二&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;input id=&quot;firstNameInput&quot; type=&quot;text&quot; /&gt; 
+        &lt;input id=&quot;lastNameInput&quot; type=&quot;text&quot; /&gt; 
+        &lt;input type=&quot;button&quot; onclick=&quot;greet()&quot; /&gt;
+        &lt;script language=&quot;JavaScript&quot;&gt;
+        function greet() {
+            var firstName = document.getElementById(&quot;firstNameInput&quot;).value;
+            var lastName = document.getElementById(&quot;lastNameInput&quot;).value;
+            alert(&quot;Hello, &quot; + firstName + &quot;.&quot; + lastName);
+        }
+        &lt;/script&gt; 
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="3-结合了服务端技术的混合编程"><a href="#3-结合了服务端技术的混合编程" class="headerlink" title="3. 结合了服务端技术的混合编程"></a>3. 结合了服务端技术的混合编程</h2><p>由于静态界面不能实现保存数据等功能，出现了很多服务端技术，早期的有CGI（Common Gateway Interface，多数用C语言或者Perl实现的），ASP（使用VBScript或者JScript），JSP（使用Java），PHP等等，Python和Ruby等语言也常被用于这类用途。</p>
+<p>有了这类技术，在HTML中就可以使用表单的post功能提交数据了，比如：</p>
+<pre><code>&lt;form method=&quot;post&quot; action=&quot;username.asp&quot;&gt;
+    &lt;p&gt;First Name: &lt;input type=&quot;text&quot; name=&quot;firstName&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;Last Name: &lt;input type=&quot;text&quot; name=&quot;lastName&quot; /&gt;&lt;/p&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+</code></pre><p>在这个阶段，由于客户端和服务端的职责未作明确的划分，比如生成一个字符串，可以由前端的JavaScript做，也可以由服务端语言做，所以通常在一个界面里，会有两种语言混杂在一起，用&lt;%和%&gt;标记的部分会在服务端执行，输出结果，甚至经常有把数据库连接的代码跟页面代码混杂在一起的情况，给维护带来较大的不便。</p>
+<pre><code>&lt;html&gt;
+    &lt;body&gt;
+        &lt;p&gt;Hello world!&lt;/p&gt;
+        &lt;p&gt;
+        &lt;%
+            response.write(&quot;Hello world from server!&quot;)
+        %&gt;
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="4-组件化的萌芽"><a href="#4-组件化的萌芽" class="headerlink" title="4.组件化的萌芽"></a>4.组件化的萌芽</h2><p>这个时代，也逐渐出现了组件化的萌芽。比较常见的有服务端的组件化，比如把某一类服务端功能单独做成片段，然后其他需要的地方来include进来，典型的有：ASP里面数据库连接的地方，把数据源连接的部分写成conn.asp，然后其他每个需要操作数据库的asp文件包含它。</p>
+<p>上面所说的是在服务端做的，浏览器端通常有针对JavaScript的，把某一类的Javascript代码写到单独的js文件中，界面根据需要，引用不同的js文件。针对界面的组件方式，通常利用frameset和iframe这两个标签。某一大块有独立功能的界面写到一个html文件，然后在主界面里面把它当作一个frame来载入，一般的B/S系统集成菜单的方式都是这样的。</p>
+<p>此外，还出现了一些基于特定浏览器的客户端组件技术，比如IE浏览器的HTC（HTML Component）。这种技术最初是为了对已有的常用元素附加行为的，后来有些场合也用它来实现控件。微软ASP.net的一些版本里，使用这种技术提供了树形列表，日历，选项卡等功能。HTC的优点是允许用户自行扩展HTML标签，可以在自己的命名空间里定义元素，然后，使用HTML，JavaScript和CSS来实现它的布局、行为和观感。这种技术因为是微软的私有技术，所以逐渐变得不那么流行。</p>
+<p>Firefox浏览器里面推出过一种叫XUL的技术，也没有流行起来。</p>
+<h1 id="二-铁器时代"><a href="#二-铁器时代" class="headerlink" title="二. 铁器时代"></a>二. 铁器时代</h1><p>这个时代的典型特征是Ajax的出现。</p>
+<h2 id="1-AJAX"><a href="#1-AJAX" class="headerlink" title="1. AJAX"></a>1. AJAX</h2><p>AJAX其实是一系列已有技术的组合，早在这个名词出现之前，这些技术的使用就已经比较广泛了，GMail因为恰当地应用了这些技术，获得了很好的用户体验。</p>
+<p>由于Ajax的出现，规模更大，效果更好的Web程序逐渐出现，在这些程序中，JavaScript代码的数量迅速增加。出于代码组织的需要，“JavaScript框架”这个概念逐步形成，当时的主流是prototype和mootools，这两者各有千秋，提供了各自方式的面向对象组织思路。</p>
+<h2 id="2-JavaScript基础库"><a href="#2-JavaScript基础库" class="headerlink" title="2. JavaScript基础库"></a>2. JavaScript基础库</h2><p>Prototype框架主要是为JavaScript代码提供了一种组织方式，对一些原生的JavaScript类型提供了一些扩展，比如数组、字符串，又额外提供了一些实用的数据结构，如：枚举，Hash等，除此之外，还对dom操作，事件，表单和Ajax做了一些封装。</p>
+<p>Mootools框架的思路跟Prototype很接近，它对JavaScript类型扩展的方式别具一格，所以在这类框架中，经常被称作“最优雅的”对象扩展体系。</p>
+<p>从这两个框架的所提供的功能来看，它们的定位是核心库，在使用的时候一般需要配合一些外围的库来完成。</p>
+<p>jQuery与这两者有所不同，它着眼于简化DOM相关的代码。 例如：</p>
+<ul>
+<li>DOM的选择</li>
+</ul>
+<p>jQuery提供了一系列选择器用于选取界面元素，在其他一些框架中也有类似功能，但是一般没有它的简洁、强大。</p>
+<pre><code>$(&quot;*&quot;)             //选取所有元素 
+
+$(&quot;#lastname&quot;)     //选取id为lastname的元素 
+
+$(&quot;.intro&quot;)            //选取所有class=&quot;intro&quot;的元素 
+
+$(&quot;p&quot;)             //选取所有&lt;p&gt;元素 
+
+$(&quot;.intro.demo&quot;)   //选取所有 class=&quot;intro&quot;且class=&quot;demo&quot;的元素 
+</code></pre><ul>
+<li>链式表达式：</li>
+</ul>
+<p>在jQuery中，可以使用链式表达式来连续操作dom，比如下面这个例子：</p>
+<p>如果不使用链式表达式，可能我们需要这么写：</p>
+<pre><code>var neat = $(&quot;p.neat&quot;);
+neat.addClass(&quot;ohmy&quot;);
+neat.show(&quot;slow&quot;);
+</code></pre><p>但是有了链式表达式，我们只需要这么一行代码就可以完成这些：</p>
+<pre><code>$(&quot;p.neat&quot;).addClass(&quot;ohmy&quot;).show(&quot;slow&quot;);
+</code></pre><p>除此之外，jQuery还提供了一些动画方面的特效代码，也有大量的外围库，比如jQuery UI这样的控件库，jQuery mobile这样的移动开发库等等。</p>
+<h2 id="3-模块代码加载方式"><a href="#3-模块代码加载方式" class="headerlink" title="3. 模块代码加载方式"></a>3. 模块代码加载方式</h2><p>以上这些框架提供了代码的组织能力，但是未能提供代码的动态加载能力。动态加载JavaScript为什么重要呢？因为随着Ajax的普及，jQuery等辅助库的出现，Web上可以做很复杂的功能，因此，单页面应用程序（SPA，Single Page Application）也逐渐多了起来。</p>
+<p>单个的界面想要做很多功能，需要写的代码是会比较多的，但是，并非所有的功能都需要在界面加载的时候就全部引入，如果能够在需要的时候才加载那些代码，就把加载的压力分担了，在这个背景下，出现了一些用于动态加载JavaScript的框架，也出现了一些定义这类可被动态加载代码的规范。</p>
+<p>在这些框架里，知名度比较高的是RequireJS，它遵循一种称为AMD（Asynchronous Module Definition）的规范。</p>
+<p>比如下面这段，定义了一个动态的匿名模块，它依赖math模块</p>
+<pre><code>define([&quot;math&quot;], function(math) {
+    return {
+        addTen : function(x) {
+            return math.add(x, 10);
+        }
+    };
+}); 
+</code></pre><p>假设上面的代码存放于adder.js中，当需要使用这个模块的时候，通过如下代码来引入adder：</p>
+<pre><code>&lt;script src=&quot;require.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    require([&quot;adder&quot;], function(adder) {
+        //使用这个adder     }); 
+&lt;/script&gt;
+</code></pre><p>RequireJS除了提供异步加载方式，也可以使用同步方式加载模块代码。AMD规范除了使用在前端浏览器环境中，也可以运行于nodejs等服务端环境，nodejs的模块就是基于这套规范定义的。（修订，这里弄错了，nodejs是基于类似的CMD规范的）</p>
+<h1 id="三-工业革命"><a href="#三-工业革命" class="headerlink" title="三. 工业革命"></a>三. 工业革命</h1><p>这个时期，随着Web端功能的日益复杂，人们开始考虑这样一些问题：</p>
+<ul>
+<li><p>如何更好地模块化开发</p>
+</li>
+<li><p>业务数据如何组织</p>
+</li>
+<li><p>界面和业务数据之间通过何种方式进行交互</p>
+</li>
+</ul>
+<p>在这种背景下，出现了一些前端MVC、MVP、MVVM框架，我们把这些框架统称为MV*框架。这些框架的出现，都是为了解决上面这些问题，具体的实现思路各有不同，主流的有Backbone，AngularJS，Ember，Spine等等，本文主要选用Backbone和AngularJS来讲述以下场景。</p>
+<h2 id="1-数据模型"><a href="#1-数据模型" class="headerlink" title="1. 数据模型"></a>1. 数据模型</h2><p>在这些框架里，定义数据模型的方式与以往有些差异，主要在于数据的get和set更加有意义了，比如说，可以把某个实体的get和set绑定到RESTful的服务上，这样，对某个实体的读写可以更新到数据库中。另外一个特点是，它们一般都提供一个事件，用于监控数据的变化，这个机制使得数据绑定成为可能。</p>
+<p>在一些框架中，数据模型需要在原生的JavaScript类型上做一层封装，比如Backbone的方式是这样：</p>
+<pre><code>var Todo = Backbone.Model.extend({
+    // Default attributes for the todo item.     defaults : function() {
+        return {
+            title : &quot;empty todo...&quot;,
+            order : Todos.nextOrder(),
+            done : false
+        };
+    },
+
+    // Ensure that each todo created has `title`.     initialize : function() {
+        if (!this.get(&quot;title&quot;)) {
+            this.set({
+                &quot;title&quot; : this.defaults().title
+            });
+        }
+    },
+
+    // Toggle the &apos;done&apos; state of this todo item.     toggle : function() {
+        this.save({
+            done : !this.get(&quot;done&quot;)
+        });
+    }
+});
+</code></pre><p>上述例子中，defaults方法用于提供模型的默认值，initialize方法用于做一些初始化工作，这两个都是约定的方法，toggle是自定义的，用于保存todo的选中状态。</p>
+<p>除了对象，Backbone也支持集合类型，集合类型在定义的时候要通过model属性指定其中的元素类型。</p>
+<pre><code>// The collection of todos is backed by *localStorage* instead of a remote server. var TodoList = Backbone.Collection.extend({
+    // Reference to this collection&apos;s model.     model : Todo,
+
+    // Save all of the todo items under the &apos;&quot;todos-backbone&quot;&apos; namespace.     localStorage : new Backbone.LocalStorage(&quot;todos-backbone&quot;),
+
+    // Filter down the list of all todo items that are finished.     done : function() {
+        return this.filter(function(todo) {
+            return todo.get(&apos;done&apos;);
+        });
+    },
+
+    // Filter down the list to only todo items that are still not finished.     remaining : function() {
+        return this.without.apply(this, this.done());
+    },
+
+    // We keep the Todos in sequential order, despite being saved by unordered     //GUID in the database. This generates the next order number for new items.     nextOrder : function() {
+        if (!this.length)
+            return 1;
+        return this.last().get(&apos;order&apos;) + 1;
+    },
+
+    // Todos are sorted by their original insertion order.     comparator : function(todo) {
+        return todo.get(&apos;order&apos;);
+    }
+});
+</code></pre><p>数据模型也可以包含一些方法，比如自身的校验，或者跟后端的通讯、数据的存取等等，在上面两个例子中，也都有体现。</p>
+<p>AngularJS的模型定义方式与Backbone不同，可以不需要经过一层封装，直接使用原生的JavaScript简单数据、对象、数组，相对来说比较简便。</p>
+<h2 id="2-控制器"><a href="#2-控制器" class="headerlink" title="2. 控制器"></a>2. 控制器</h2><p>在Backbone中，是没有独立的控制器的，它的一些控制的职责都放在了视图里，所以其实这是一种MVP（Model View Presentation）模式，而AngularJS有很清晰的控制器层。</p>
+<p>还是以这个todo为例，在AngularJS中，会有一些约定的注入，比如$scope，它是控制器、模型和视图之间的桥梁。在控制器定义的时候，将$scope作为参数，然后，就可以在控制器里面为它添加模型的支持。</p>
+<pre><code>function TodoCtrl($scope) {
+    $scope.todos = [{
+        text : &apos;learn angular&apos;,
+        done : true
+    }, {
+        text : &apos;build an angular app&apos;,
+        done : false
+    }];
+
+    $scope.addTodo = function() {
+        $scope.todos.push({
+            text : $scope.todoText,
+            done : false
+        });
+        $scope.todoText = &apos;&apos;;
+    };
+
+    $scope.remaining = function() {
+        var count = 0;
+        angular.forEach($scope.todos, function(todo) {
+            count += todo.done ? 0 : 1;
+        });
+        return count;
+    };
+
+    $scope.archive = function() {
+        var oldTodos = $scope.todos;
+        $scope.todos = [];
+        angular.forEach(oldTodos, function(todo) {
+            if (!todo.done)
+                $scope.todos.push(todo);
+        });
+    };
+}    
+</code></pre><p>本例中为$scope添加了todos这个数组，addTodo，remaining和archive三个方法，然后，可以在视图中对他们进行绑定。</p>
+<h2 id="3-视图"><a href="#3-视图" class="headerlink" title="3. 视图"></a>3. 视图</h2><p>在这些主流的MV*框架中，一般都提供了定义视图的功能。在Backbone中，是这样定义视图的：</p>
+<pre><code>// The DOM element for a todo item... var TodoView = Backbone.View.extend({
+    //... is a list tag.     tagName : &quot;li&quot;,
+
+    // Cache the template function for a single item.     template : _.template($(&apos;#item-template&apos;).html()),
+
+    // The DOM events specific to an item.     events : {
+        &quot;click .toggle&quot; : &quot;toggleDone&quot;,
+        &quot;dblclick .view&quot; : &quot;edit&quot;,
+        &quot;click a.destroy&quot; : &quot;clear&quot;,
+        &quot;keypress .edit&quot; : &quot;updateOnEnter&quot;,
+        &quot;blur .edit&quot; : &quot;close&quot;
+    },
+
+    // The TodoView listens for changes to its model, re-rendering. Since there&apos;s     // a one-to-one correspondence between a **Todo** and a **TodoView** in this     // app, we set a direct reference on the model for convenience.     initialize : function() {
+        this.listenTo(this.model, &apos;change&apos;, this.render);
+        this.listenTo(this.model, &apos;destroy&apos;, this.remove);
+    },
+
+    // Re-render the titles of the todo item.     render : function() {
+        this.$el.html(this.template(this.model.toJSON()));
+        this.$el.toggleClass(&apos;done&apos;, this.model.get(&apos;done&apos;));
+        this.input = this.$(&apos;.edit&apos;);
+        return this;
+    },
+
+    //...... 
+    // Remove the item, destroy the model.     clear : function() {
+        this.model.destroy();
+    }
+});
+</code></pre><p>上面这个例子是一个典型的“部件”视图，它对于界面上的已有元素没有依赖。也有那么一些视图，需要依赖于界面上的已有元素，比如下面这个，它通过el属性，指定了HTML中id为todoapp的元素，并且还在initialize方法中引用了另外一些元素，通常，需要直接放置到界面的顶层试图会采用这种方式，而“部件”视图一般由主视图来创建、布局。</p>
+<pre><code>// Our overall **AppView** is the top-level piece of UI. var AppView = Backbone.View.extend({
+    // Instead of generating a new element, bind to the existing skeleton of     // the App already present in the HTML.     el : $(&quot;#todoapp&quot;),
+
+    // Our template for the line of statistics at the bottom of the app.     statsTemplate : _.template($(&apos;#stats-template&apos;).html()),
+
+    // Delegated events for creating new items, and clearing completed ones.     events : {
+        &quot;keypress #new-todo&quot; : &quot;createOnEnter&quot;,
+        &quot;click #clear-completed&quot; : &quot;clearCompleted&quot;,
+        &quot;click #toggle-all&quot; : &quot;toggleAllComplete&quot;
+    },
+
+    // At initialization we bind to the relevant events on the `Todos`     // collection, when items are added or changed. Kick things off by     // loading any preexisting todos that might be saved in *localStorage*.     initialize : function() {
+        this.input = this.$(&quot;#new-todo&quot;);
+        this.allCheckbox = this.$(&quot;#toggle-all&quot;)[0];
+
+        this.listenTo(Todos, &apos;add&apos;, this.addOne);
+        this.listenTo(Todos, &apos;reset&apos;, this.addAll);
+        this.listenTo(Todos, &apos;all&apos;, this.render);
+
+        this.footer = this.$(&apos;footer&apos;);
+        this.main = $(&apos;#main&apos;);
+
+        Todos.fetch();
+    },
+
+    // Re-rendering the App just means refreshing the statistics -- the rest     // of the app doesn&apos;t change.     render : function() {
+        var done = Todos.done().length;
+        var remaining = Todos.remaining().length;
+
+        if (Todos.length) {
+            this.main.show();
+            this.footer.show();
+            this.footer.html(this.statsTemplate({
+                done : done,
+                remaining : remaining
+            }));
+        } else {
+            this.main.hide();
+            this.footer.hide();
+        }
+
+        this.allCheckbox.checked = !remaining;
+    },
+
+    //...... });
+</code></pre><p>对于AngularJS来说，基本不需要有额外的视图定义，它采用的是直接定义在HTML上的方式，比如：</p>
+<pre><code>&lt;div ng-controller=&quot;TodoCtrl&quot;&gt;
+    &lt;span&gt;{{remaining()}} of {{todos.length}} remaining&lt;/span&gt;
+    &lt;a href=&quot;&quot; ng-click=&quot;archive()&quot;&gt;archive&lt;/a&gt;
+    &lt;ul class=&quot;unstyled&quot;&gt;
+        &lt;li ng-repeat=&quot;todo in todos&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; ng-model=&quot;todo.done&quot;&gt;
+            &lt;span class=&quot;done-{{todo.done}}&quot;&gt;{{todo.text}}&lt;/span&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;form ng-submit=&quot;addTodo()&quot;&gt;
+        &lt;input type=&quot;text&quot; ng-model=&quot;todoText&quot;  size=&quot;30&quot;
+        placeholder=&quot;add new todo here&quot;&gt;
+        &lt;input class=&quot;btn-primary&quot; type=&quot;submit&quot; value=&quot;add&quot;&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+</code></pre><p>在这个例子中，使用ng-controller注入了一个TodoCtrl的实例，然后，在TodoCtrl的$scope中附加的那些变量和方法都可以直接访问了。注意到其中的ng-repeat部分，它遍历了todos数组，然后使用其中的单个todo对象创建了一些HTML元素，把相应的值填到里面。这种做法和ng-model一样，都创造了双向绑定，即：</p>
+<ul>
+<li><p>改变模型可以随时反映到界面上</p>
+</li>
+<li><p>在界面上做的操作（输入，选择等等）可以实时反映到模型里。</p>
+</li>
+</ul>
+<p>而且，这种绑定都会自动忽略其中可能因为空数据而引起的异常情况。</p>
+<h2 id="4-模板"><a href="#4-模板" class="headerlink" title="4. 模板"></a>4. 模板</h2><p>模板是这个时期一种很典型的解决方案。我们常常有这样的场景：在一个界面上重复展示类似的DOM片段，例如微博。以传统的开发方式，也可以轻松实现出来，比如：</p>
+<pre><code>var feedsDiv = $(&quot;#feedsDiv&quot;);
+
+for (var i = 0; i &lt; 5; i++) {
+    var feedDiv = $(&quot;&lt;div class=&apos;post&apos;&gt;&lt;/div&gt;&quot;);
+
+    var authorDiv = $(&quot;&lt;div class=&apos;author&apos;&gt;&lt;/div&gt;&quot;);
+    var authorLink = $(&quot;&lt;a&gt;&lt;/a&gt;&quot;)
+        .attr(&quot;href&quot;, &quot;/user.html?user=&apos;&quot; + &quot;Test&quot; + &quot;&apos;&quot;)
+        .html(&quot;@&quot; + &quot;Test&quot;)
+        .appendTo(authorDiv);
+    authorDiv.appendTo(feedDiv);
+
+    var contentDiv = $(&quot;&lt;div&gt;&lt;/div&gt;&quot;)
+        .html(&quot;Hello, world!&quot;)
+        .appendTo(feedDiv);
+    var dateDiv = $(&quot;&lt;div&gt;&lt;/div&gt;&quot;)
+        .html(&quot;发布日期：&quot; + new Date().toString())
+        .appendTo(feedDiv);
+
+    feedDiv.appendTo(feedsDiv);
+}
+</code></pre><p>但是使用模板技术，这一切可以更加优雅，以常用的模板框架UnderScore为例，实现这段功能的代码为：</p>
+<pre><code>var templateStr = &apos;&lt;div class=&quot;post&quot;&gt;&apos;
+    +&apos;&lt;div class=&quot;author&quot;&gt;&apos;
+    +   &apos;&lt;a href=&quot;/user.html?user={{creatorName}}&quot;&gt;@{{creatorName}}&lt;/a&gt;&apos;
+    +&apos;&lt;/div&gt;&apos;
+    +&apos;&lt;div&gt;{{content}}&lt;/div&gt;&apos;
+    +&apos;&lt;div&gt;{{postedDate}}&lt;/div&gt;&apos;
+    +&apos;&lt;/div&gt;&apos;;
+var template = _.template(templateStr);
+template({
+    createName : &quot;Xufei&quot;,
+    content: &quot;Hello, world&quot;,
+    postedDate: new Date().toString()
+});
+</code></pre><p>也可以这么定义：</p>
+<pre><code>&lt;script type=&quot;text/template&quot; id=&quot;feedTemplate&quot;&gt;
+&lt;% _.each(feeds, function (item) { %&gt;
+    &lt;div class=&quot;post&quot;&gt;
+        &lt;div class=&quot;author&quot;&gt;
+            &lt;a href=&quot;/user.html?user=&lt;%= item.creatorName %&gt;&quot;&gt;@&lt;%= item.creatorName %&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div&gt;&lt;%= item.content %&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;%= item.postedData %&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;% }); %&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+$(&apos;#feedsDiv&apos;).html( _.template($(&apos;#feedTemplate&apos;).html(), feeds));
+&lt;/script&gt;
+</code></pre><p>除此之外，UnderScore还提供了一些很方便的集合操作，使得模板的使用更加方便。如果你打算使用BackBone框架，并且需要用到模板功能，那么UnderScore是一个很好的选择，当然，也可以选用其它的模板库，比如Mustache等等。</p>
+<p>如果使用AngularJS，可以不需要额外的模板库，它自身就提供了类似的功能，比如上面这个例子可以改写成这样：</p>
+<pre><code>&lt;div class=&quot;post&quot; ng-repeat=&quot;post in feeds&quot;&gt;
+    &lt;div class=&quot;author&quot;&gt;
+        &lt;a ng-href=&quot;/user.html?user={{post.creatorName}}&quot;&gt;@{{post.creatorName}}&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;{{post.content}}&lt;/div&gt;
+    &lt;div&gt;
+        发布日期：{{post.postedTime | date:'medium'}}
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p>主流的模板技术都提供了一些特定的语法，有些功能很强。值得注意的是，他们虽然与JSP之类的代码写法类似甚至相同，但原理差别很大，这些模板框架都是在浏览器端执行的，不依赖任何服务端技术，即使界面文件是.html也可以，而传统比如JSP模板是需要后端支持的，执行时间是在服务端。</p>
+<h2 id="5-路由"><a href="#5-路由" class="headerlink" title="5. 路由"></a>5. 路由</h2><p>通常路由是定义在后端的，但是在这类MV*框架的帮助下，路由可以由前端来解析执行。比如下面这个Backbone的路由示例：</p>
+<pre><code>var Workspace = Backbone.Router.extend({
+    routes: {
+        &quot;help&quot;:              &quot;help&quot;,    // #help         &quot;search/:query&quot;:        &quot;search&quot;,  // #search/kiwis         &quot;search/:query/p:page&quot;: &quot;search&quot;   // #search/kiwis/p7     },
+
+    help: function() {
+        ...
+    },
+
+    search: function(query, page) {
+        ...
+    }   
+});
+</code></pre><p>在上述例子中，定义了一些路由的映射关系，那么，在实际访问的时候，如果在地址栏输入”#search/obama/p2”，就会匹配到”search/:query/p:page”这条路由，然后，把”obama”和”2”当作参数，传递给search方法。</p>
+<p>AngularJS中定义路由的方式有些区别，它使用一个$routeProvider来提供路由的存取，每一个when表达式配置一条路由信息，otherwise配置默认路由，在配置路由的时候，可以指定一个额外的控制器，用于控制这条路由对应的html界面：</p>
+<pre><code>app.config([&apos;$routeProvider&apos;,
+function($routeProvider) {
+    $routeProvider.when(&apos;/phones&apos;, {
+        templateUrl : &apos;partials/phone-list.html&apos;,
+        controller : PhoneListCtrl
+    }).when(&apos;/phones/:phoneId&apos;, {
+        templateUrl : &apos;partials/phone-detail.html&apos;,
+        controller : PhoneDetailCtrl
+    }).otherwise({
+        redirectTo : &apos;/phones&apos;
+    });
+}]); 
+</code></pre><p>注意，在AngularJS中，路由的template并非一个完整的html文件，而是其中的一段，文件的头尾都可以不要，也可以不要那些包含的外部样式和JavaScript文件，这些在主界面中载入就可以了。</p>
+<h2 id="6-自定义标签"><a href="#6-自定义标签" class="headerlink" title="6. 自定义标签"></a>6. 自定义标签</h2><p>用过XAML或者MXML的人一定会对其中的可扩充标签印象深刻，对于前端开发人员而言，基于标签的组件定义方式一定是优于其他任何方式的，看下面这段HTML：</p>
+<pre><code>&lt;div&gt;
+    &lt;input type=&quot;text&quot; value=&quot;hello, world&quot;/&gt;
+    &lt;button&gt;test&lt;/button&gt;
+&lt;/div&gt;
+</code></pre><p>即使是刚刚接触这种东西的新手，也能够理解它的意思，并且能够照着做出类似的东西，如果使用传统的面向对象语言去描述界面，效率远远没有这么高，这就是在界面开发领域，声明式编程比命令式编程适合的最重要原因。</p>
+<p>但是，HTML的标签是有限的，如果我们需要的功能不在其中，怎么办？在开发过程中，我们可能需要一个选项卡的功能，但是，HTML里面不提供选项卡标签，所以，一般来说，会使用一些li元素和div的组合，加上一些css，来实现选项卡的效果，也有的框架使用JavaScript来完成这些功能。总的来说，这些代码都不够简洁直观。</p>
+<p>如果能够有一种技术，能够提供类似这样的方式，该多么好呢？</p>
+<pre><code>&lt;tabs&gt;
+    &lt;tab name=&quot;Tab 1&quot;&gt;content 1&lt;/tab&gt;
+    &lt;tab name=&quot;Tab 2&quot;&gt;content 2&lt;/tab&gt;
+&lt;/tabs&gt;
+</code></pre><p>回忆一下，我们在章节1.4 组件化的萌芽 里面，提到过一种叫做HTC的技术，这种技术提供了类似的功能，而且使用起来也比较简便，问题是，它属于一种正在消亡的技术，于是我们的目光投向了更为现代的前端世界，AngularJS拯救了我们。</p>
+<p>在AngularJS的首页，可以看到这么一个区块“Create Components”，在它的演示代码里，能够看到类似的一段：</p>
+<pre><code>&lt;tabs&gt;
+    &lt;pane title=&quot;Localization&quot;&gt;
+        ...
+    &lt;/pane&gt;
+    &lt;pane title=&quot;Pluralization&quot;&gt;
+        ...
+    &lt;/pane&gt;
+&lt;/tabs&gt;
+</code></pre><p>那么，它是怎么做到的呢？秘密在这里：</p>
+<pre><code>    angular.module(&apos;components&apos;, []).directive(&apos;tabs&apos;, function() {
+    return {
+        restrict : &apos;E&apos;,
+        transclude : true,
+        scope : {},
+        controller : function($scope, $element) {
+            var panes = $scope.panes = [];
+
+            $scope.select = function(pane) {
+                angular.forEach(panes, function(pane) {
+                    pane.selected = false;
+                });
+                pane.selected = true;
+            }
+
+            this.addPane = function(pane) {
+                if (panes.length == 0)
+                    $scope.select(pane);
+                panes.push(pane);
+            }
+        },
+        template : &apos;&lt;div class=&quot;tabbable&quot;&gt;&apos;
+            + &apos;&lt;ul class=&quot;nav nav-tabs&quot;&gt;&apos; 
+            + &apos;&lt;li ng-repeat=&quot;pane in panes&quot; ng-class=&quot;{active:pane.selected}&quot;&gt;&apos; 
+            + &apos;&lt;a href=&quot;&quot; ng-click=&quot;select(pane)&quot;&gt;{{pane.title}}&lt;/a&gt;&apos; 
+            + &apos;&lt;/li&gt;&apos; 
+            + &apos;&lt;/ul&gt;&apos; 
+            + &apos;&lt;div class=&quot;tab-content&quot; ng-transclude&gt;&lt;/div&gt;&apos; 
+            + &apos;&lt;/div&gt;&apos;,
+        replace : true
+    };
+}).directive(&apos;pane&apos;, function() {
+    return {
+        require : &apos;^tabs&apos;,
+        restrict : &apos;E&apos;,
+        transclude : true,
+        scope : {
+            title : &apos;@&apos;
+        },
+        link : function(scope, element, attrs, tabsCtrl) {
+            tabsCtrl.addPane(scope);
+        },
+        template : &apos;&lt;div class=&quot;tab-pane&quot; ng-class=&quot;{active: selected}&quot; ng-transclude&gt;&apos; + &apos;&lt;/div&gt;&apos;,
+        replace : true
+    };
+})
+</code></pre><p>这段代码里，定义了tabs和pane两个标签，并且限定了pane标签不能脱离tabs而单独存在，tabs的controller定义了它的行为，两者的template定义了实际生成的html，通过这种方式，开发者可以扩展出自己需要的新元素，对于使用者而言，这不会增加任何额外的负担。</p>
+<p>原文地址： <a href="http://www.html-js.com/article/2628" target="_blank" rel="external">http://www.html-js.com/article/2628</a></p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2017/08/14/JSON和JSONP的区别/" data-toggle="tooltip" data-placement="top"
+                           title="JSON和JSONP的区别">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一-刀耕火种"><span class="toc-text">一. 刀耕火种</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-静态页面"><span class="toc-text">1. 静态页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-带有简单逻辑的界面"><span class="toc-text">2. 带有简单逻辑的界面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-结合了服务端技术的混合编程"><span class="toc-text">3. 结合了服务端技术的混合编程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-组件化的萌芽"><span class="toc-text">4.组件化的萌芽</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二-铁器时代"><span class="toc-text">二. 铁器时代</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-AJAX"><span class="toc-text">1. AJAX</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-JavaScript基础库"><span class="toc-text">2. JavaScript基础库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-模块代码加载方式"><span class="toc-text">3. 模块代码加载方式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三-工业革命"><span class="toc-text">三. 工业革命</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-数据模型"><span class="toc-text">1. 数据模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-控制器"><span class="toc-text">2. 控制器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-视图"><span class="toc-text">3. 视图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-模板"><span class="toc-text">4. 模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-路由"><span class="toc-text">5. 路由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-自定义标签"><span class="toc-text">6. 自定义标签</span></a></li></ol></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 深海空间 2017
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yoursite.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="">
+</body>
+
+</html>
